@@ -1,0 +1,208 @@
+PS D:\blockchain\projects\DApp-SupplyChain> truffle develop
+Truffle Develop started at http://127.0.0.1:9545/
+
+Accounts:
+(0) 0x4c5217ff4e4f6e5279ab3482ee1913da447cf6de
+(1) 0xafaa4b378fd5418adb699d82ccbea03115465337
+(2) 0x858ae4961ce116aa86ca41726a79671a8568cefd
+(3) 0x5c48ac0d68edb056c743e5ef09965f22f26750ef
+(4) 0xcd9ad6fdd3362a8919b61b0923021b324e97b30a
+(5) 0xefaaf88fc9c0b32f545595ee6e01a4a4121e1e33
+(6) 0xd4284a0221d771ed57bbd0ec4bc5f76fd3767ef3
+(7) 0xa6a24f1294e1dc170392596e83a61ff834a44ac8
+(8) 0x622b1e8c333e67595d2c99fdf8f9417ecfe0668e
+(9) 0xb8bd4978473cbcc9550c4bb58fcf73b51bf4d27a
+
+Private Keys:
+(0) 098108903cf93d2063e03e9117af35a269b48bc0289489a4c5e1ac7fc60d50cf
+(1) a5b1152cf52ee4df2fa428d5d1738109249a2c076c052b3bfd04666832dbd1f8
+(2) 7a7323feab53899937a69c7586711d045cde0cbf0dc45327c67307d29a340a86
+(3) eac2e75e0916e77634bd0614e567f8c7a61f5c67a30b25c176ebd4eddb7d792c
+(4) 05e191012c825790b143dcd979d9245a3784e3e350b1d5719f1e847694c9e2f7
+(5) 37e8df003b4cfad253bede5b7511ec050b0a7a58ab641b88027d951cdaeef25f
+(6) 3944b449e44ce430e0c051827300b82bd17ad7982bd4b645b3783234dd735dc7
+(7) 155f675bd8fbe574aa0afad09369fc8fe1be48e37b3940e9f5962e1c1b0ed228
+(8) 460249015273d166de44805a44b916063490426f99e6877eaa9b1125a7a38450
+(9) 9668dca0d135af1192db6649520b510785a3b3e6da5df6090167dcaa98da5bdf
+
+Mnemonic: pepper mobile input trick route auction seed federal mistake month unaware dish
+
+⚠️  Important ⚠️  : This mnemonic was created for you by Truffle. It is not secure.
+Ensure you do not use it on production blockchains, or else you risk losing funds.
+
+truffle(develop)> migrate --reset
+
+Compiling your contracts...
+===========================
+> Compiling .\contracts\coffeebase\SupplyChain.sol
+> Artifacts written to D:\blockchain\projects\DApp-SupplyChain\build\contracts
+> Compiled successfully using:
+   - solc: 0.8.0+commit.c7dfd78e.Emscripten.clang
+
+
+
+Starting migrations...
+======================
+> Network name:    'develop'
+> Network id:      5777
+> Block gas limit: 6721975 (0x6691b7)
+
+
+1_initial_migration.js
+======================
+
+   Replacing 'Migrations'
+   ----------------------
+   > transaction hash:    0xbf46727a6ab9751adb08a8824e06b1f6f1790aca4a33dcc1cfec2cfd33a8996b
+   > Blocks: 0            Seconds: 0
+   > contract address:    0xCb2EF34e6c08135C90F9831D3D94BE50Ca136c57
+   > block number:        1
+   > block timestamp:     1622914620
+   > account:             0x4C5217FF4E4f6e5279Ab3482EE1913da447Cf6de
+   > balance:             99.99459248
+   > gas used:            270376 (0x42028)
+   > gas price:           20 gwei
+   > value sent:          0 ETH
+   > total cost:          0.00540752 ETH
+
+
+   > Saving migration to chain.
+   > Saving artifacts
+   -------------------------------------
+   > Total cost:          0.00540752 ETH
+
+
+2_deploy_contracts.js
+=====================
+
+   Replacing 'FarmerRole'
+   ----------------------
+   > transaction hash:    0xf3a70a98dbb394c9850bc5330362541142b1efe3f30b415f94bd4bd14366344c
+   > Blocks: 0            Seconds: 0
+   > contract address:    0xD67a230832DB68Cd7B5b4011Ef5E1B1fe89d9613
+   > block number:        3
+   > block timestamp:     1622914622
+   > account:             0x4C5217FF4E4f6e5279Ab3482EE1913da447Cf6de
+   > balance:             99.98645218
+   > gas used:            364477 (0x58fbd)
+   > gas price:           20 gwei
+   > value sent:          0 ETH
+   > total cost:          0.00728954 ETH
+
+
+   Replacing 'DistributorRole'
+   ---------------------------
+   > transaction hash:    0x0f93dbde79db17435f8ef39a38b110f82a5f95414858558413f389aff50c0f3e
+   > Blocks: 0            Seconds: 0
+   > contract address:    0x2146E1B7C0e343E990a920C22753E95c2cAaDAbC
+   > block number:        4
+   > block timestamp:     1622914623
+   > account:             0x4C5217FF4E4f6e5279Ab3482EE1913da447Cf6de
+   > balance:             99.97895672
+   > gas used:            374773 (0x5b7f5)
+   > gas price:           20 gwei
+   > value sent:          0 ETH
+   > total cost:          0.00749546 ETH
+
+
+   Replacing 'RetailerRole'
+   ------------------------
+   > transaction hash:    0x410a8d19f7877b96d61bea9a64e8f7e76360f2a275c9e1c1e694f9626f0794ba
+   > Blocks: 0            Seconds: 0
+   > contract address:    0xe2f894606C78444f8F26eC13b4AFEE607c65463E
+   > block number:        5
+   > block timestamp:     1622914624
+   > account:             0x4C5217FF4E4f6e5279Ab3482EE1913da447Cf6de
+   > balance:             99.97166598
+   > gas used:            364537 (0x58ff9)
+   > gas price:           20 gwei
+   > value sent:          0 ETH
+   > total cost:          0.00729074 ETH
+
+
+   Replacing 'ConsumerRole'
+   ------------------------
+   > transaction hash:    0xce47b0f170f02d04047e24f5a3bad07c6e8ef49998e046952c97ea86825cda14
+   > Blocks: 0            Seconds: 0
+   > contract address:    0xDa174889C0b2C6DC752741c193142d8F9AE3124f
+   > block number:        6
+   > block timestamp:     1622914625
+   > account:             0x4C5217FF4E4f6e5279Ab3482EE1913da447Cf6de
+   > balance:             99.96432784
+   > gas used:            366907 (0x5993b)
+   > gas price:           20 gwei
+   > value sent:          0 ETH
+   > total cost:          0.00733814 ETH
+
+
+   Replacing 'SupplyChain'
+   -----------------------
+   > transaction hash:    0x64b42dbbdcbde3b697d8df07a4ef50862dd843436aa75a633ff6b42ce450e75e
+   > Blocks: 0            Seconds: 0
+   > contract address:    0x2a983C8Aa3359Efd07d036e672Eb870eB09DA7CF
+   > block number:        7
+   > block timestamp:     1622914627
+   > account:             0x4C5217FF4E4f6e5279Ab3482EE1913da447Cf6de
+   > balance:             99.89582226
+   > gas used:            3425279 (0x3443ff)
+   > gas price:           20 gwei
+   > value sent:          0 ETH
+   > total cost:          0.06850558 ETH
+
+
+   > Saving migration to chain.
+   > Saving artifacts
+   -------------------------------------
+   > Total cost:          0.09791946 ETH
+
+
+Summary
+=======
+> Total deployments:   6
+> Final cost:          0.10332698 ETH
+
+
+- Blocks: 0            Seconds: 0
+- Saving migration to chain.
+- Blocks: 0            Seconds: 0
+- Blocks: 0            Seconds: 0
+- Blocks: 0            Seconds: 0
+- Blocks: 0            Seconds: 0
+- Blocks: 0            Seconds: 0
+- Saving migration to chain.
+
+truffle(develop)> test
+Using network 'develop'.
+
+
+Compiling your contracts...
+===========================
+> Everything is up to date, there is nothing to compile.
+
+ganache-cli accounts used here...
+Contract Owner: accounts[0]  0x4C5217FF4E4f6e5279Ab3482EE1913da447Cf6de
+Farmer: accounts[1]  0xaFaa4b378Fd5418aDb699D82ccBeA03115465337
+Distributor: accounts[2]  0x858AE4961CE116AA86ca41726A79671A8568CEFd
+Retailer: accounts[3]  0x5c48AC0D68EdB056C743e5EF09965F22f26750Ef
+Consumer: accounts[4]  0xcd9Ad6FDD3362A8919b61B0923021B324e97b30A
+
+
+  Contract: SupplyChain
+    √ Testing smart contract function harvestItem() that allows a farmer to harvest coffee (2273ms)
+    √ Testing smart contract function processItem() that allows a farmer to process coffee (697ms)
+    √ Testing smart contract function packItem() that allows a farmer to pack coffee (695ms)
+    √ Testing smart contract function sellItem() that allows a farmer to sell coffee (842ms)
+    √ Testing smart contract function buyItem() that allows a distributor to buy coffee (802ms)
+    √ Testing smart contract function shipItem() that allows a distributor to ship coffee (766ms)
+    √ Testing smart contract function receiveItem() that allows a retailer to mark coffee received (940ms)
+    √ Testing smart contract function purchaseItem() that allows a consumer to purchase coffee (881ms)
+    √ Testing smart contract function fetchItemBufferOne() that allows anyone to fetch item details from blockchain (250ms)
+    √ Testing smart contract function fetchItemBufferTwo() that allows anyone to fetch item details from blockchain (269ms)
+    √ Testing smart contract function transferOwnership() that changes contract Owner to FarmerID (556ms)
+
+
+  11 passing (10s)
+
+
+truffle(develop)>
+

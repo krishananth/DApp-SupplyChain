@@ -1,0 +1,161 @@
+PS D:\blockchain\projects\DApp-SupplyChain> truffle migrate --network rinkeby
+
+Compiling your contracts...
+===========================
+> Everything is up to date, there is nothing to compile.
+
+
+
+Starting migrations...
+======================
+> Network name:    'rinkeby'
+> Network id:      4
+> Block gas limit: 10000000 (0x989680)
+
+
+1_initial_migration.js
+======================
+
+   Deploying 'Migrations'
+   ----------------------
+   > transaction hash:    0xdbb41913526f6a1c9fe3a52606bdcf9ce78c8df60d2f0876557e6098d5c21612
+   > Blocks: 1            Seconds: 17
+   > contract address:    0x72b66354DF6e62e142802028A56E5c58960bb46f
+   > block number:        8700573
+   > block timestamp:     1622744553
+   > account:             0xda00070f97dC191477f0eA0b605c482Bd782605E
+   > balance:             17.572916452
+   > gas used:            271676 (0x4253c)
+   > gas price:           10 gwei
+   > value sent:          0 ETH
+   > total cost:          0.00271676 ETH
+
+   Pausing for 2 confirmations...
+   ------------------------------
+   > confirmation number: 1 (block: 8700574)
+   > confirmation number: 2 (block: 8700575)
+
+   > Saving migration to chain.
+   > Saving artifacts
+   -------------------------------------
+   > Total cost:          0.00271676 ETH
+
+
+2_deploy_contracts.js
+=====================
+
+   Deploying 'FarmerRole'
+   ----------------------
+   > transaction hash:    0xace9bcfa8608d5bdd42c06b0ef8f6a1dc991e614c87c2a12ac1a68bcd7a9ff86
+   > Blocks: 1            Seconds: 9
+   > contract address:    0xb57Bf1Cd0E6c2af8e0bbb36952710Ac3fF736569
+   > block number:        8700577
+   > block timestamp:     1622744613
+   > account:             0xda00070f97dC191477f0eA0b605c482Bd782605E
+   > balance:             17.568806302
+   > gas used:            365077 (0x59215)
+   > gas price:           10 gwei
+   > value sent:          0 ETH
+   > total cost:          0.00365077 ETH
+
+   Pausing for 2 confirmations...
+   ------------------------------
+   > confirmation number: 1 (block: 8700578)
+   > confirmation number: 2 (block: 8700579)
+
+   Deploying 'DistributorRole'
+   ---------------------------
+   > transaction hash:    0x9f0a4b2ef7d5a3b69cf2ddb8be4a1ed68a83db85623efdc40bad56d7874e572f
+   > Blocks: 0            Seconds: 9
+   > contract address:    0x6CB281035CB521538c0d18C669A0CF0Bc929CdDB
+   > block number:        8700580
+   > block timestamp:     1622744658
+   > account:             0xda00070f97dC191477f0eA0b605c482Bd782605E
+   > balance:             17.565052572
+   > gas used:            375373 (0x5ba4d)
+   > gas price:           10 gwei
+   > value sent:          0 ETH
+   > total cost:          0.00375373 ETH
+
+   Pausing for 2 confirmations...
+   ------------------------------
+   > confirmation number: 1 (block: 8700581)
+   > confirmation number: 2 (block: 8700582)
+
+   Deploying 'RetailerRole'
+   ------------------------
+   > transaction hash:    0xda84e31f0362a2c250ae0e8315a8df512d94ba5dda60a2701ef79d19ba77538b
+   > Blocks: 1            Seconds: 12
+   > contract address:    0x327F894701489665380AED0C2Fb37B895E74EB26
+   > block number:        8700583
+   > block timestamp:     1622744703
+   > account:             0xda00070f97dC191477f0eA0b605c482Bd782605E
+   > balance:             17.561401202
+   > gas used:            365137 (0x59251)
+   > gas price:           10 gwei
+   > value sent:          0 ETH
+   > total cost:          0.00365137 ETH
+
+   Pausing for 2 confirmations...
+   ------------------------------
+   > confirmation number: 1 (block: 8700584)
+   > confirmation number: 2 (block: 8700585)
+
+   Deploying 'ConsumerRole'
+   ------------------------
+   > transaction hash:    0x4391cbaef3d31c42015ad92d287daba429b2013b787bd4fc03dd4440798cd85a
+   > Blocks: 1            Seconds: 9
+   > contract address:    0x2481DbF8Cbe8f8279171569e1F3fF3992211574a
+   > block number:        8700586
+   > block timestamp:     1622744748
+   > account:             0xda00070f97dC191477f0eA0b605c482Bd782605E
+   > balance:             17.557726132
+   > gas used:            367507 (0x59b93)
+   > gas price:           10 gwei
+   > value sent:          0 ETH
+   > total cost:          0.00367507 ETH
+
+   Pausing for 2 confirmations...
+   ------------------------------
+   > confirmation number: 1 (block: 8700587)
+   > confirmation number: 2 (block: 8700588)
+
+   Deploying 'SupplyChain'
+   -----------------------
+   > transaction hash:    0xeb88e22da0c137100b62cafcdbb45144a0a3a34889ea2e3c3d90cf94a3cdb8cc
+   > Blocks: 1            Seconds: 9
+   > contract address:    0x7936a9e92b67Ea836A208FE0637021BaB35943bD
+   > block number:        8700589
+   > block timestamp:     1622744793
+   > account:             0xda00070f97dC191477f0eA0b605c482Bd782605E
+   > balance:             17.523401342
+   > gas used:            3432479 (0x34601f)
+   > gas price:           10 gwei
+   > value sent:          0 ETH
+   > total cost:          0.03432479 ETH
+
+   Pausing for 2 confirmations...
+   ------------------------------
+   > confirmation number: 1 (block: 8700590)
+   > confirmation number: 2 (block: 8700591)
+
+   > Saving migration to chain.
+   > Saving artifacts
+   -------------------------------------
+   > Total cost:          0.04905573 ETH
+
+
+Summary
+=======
+> Total deployments:   6
+> Final cost:          0.05177249 ETH
+
+
+PS D:\blockchain\projects\DApp-SupplyChain> ----
+
+0----
+Rinkeby Transaction details:
+https://rinkeby.etherscan.io/tx/0xeb88e22da0c137100b62cafcdbb45144a0a3a34889ea2e3c3d90cf94a3cdb8cc
+
+Rinkeby Contract details:
+https://rinkeby.etherscan.io/address/0x7936a9e92b67ea836a208fe0637021bab35943bd

@@ -1,0 +1,24 @@
+{
+  "name": "app",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "scripts": {
+    "build": "webpack",
+    "dev": "webpack-dev-server"
+  },
+  "devDependencies": {
+    "copy-webpack-plugin": "^5.0.5",
+    "html-webpack-plugin": "^4.5.2",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.9.0"
+  },
+  "dependencies": {
+    "@truffle/contract": "^4.3.18",
+    "@truffle/hdwallet-provider": "^1.4.0",
+    "ethjs-abi": "^0.2.1",
+    "truffle-blockchain-utils": "0.0.10",
+    "web3": "^1.2.4"
+  }
+}

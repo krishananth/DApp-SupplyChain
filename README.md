@@ -30,7 +30,7 @@ For front end client (refer to {root directory}/app/package.json):
 
 ## Design Details
 
-The project design details (diagrams) are available under ${root directory}/design
+The project design details (diagrams) are available at https://github.com/krishananth/DApp-SupplyChain/tree/main/design
 
 ## Proof of Deployments (Rinkeby)
 
@@ -41,14 +41,11 @@ https://rinkeby.etherscan.io/tx/0xeb88e22da0c137100b62cafcdbb45144a0a3a34889ea2e
 2) Rinkeby Contract details:
 https://rinkeby.etherscan.io/address/0x7936a9e92b67ea836a208fe0637021bab35943bd
 
-3) Deployment details/log to Rinkeby network:
-File name: {root directory}/reports/1_Rinkeby-Deployment-Details.txt
+3) Deployment details/log to Rinkeby network: https://github.com/krishananth/DApp-SupplyChain/blob/main/reports/1_Rinkeby-Deployment-Details.txt
 
-4) Front end Transaction details interacting with Rinkeby network:
-File name: {root directory}/reports/2_DAPP-SupplyChain-Rinkeby.pdf
+4) DAPP Front end Transaction details interacting with Rinkeby network: https://github.com/krishananth/DApp-SupplyChain/blob/main/reports/2_DAPP-SupplyChain-Rinkeby.pdf
 
-5) Truffle local machine UTC results:
-File name: {root directory}/reports/3_DAPP-SupplyChain-Truffle_UTC_Results.txt
+5) Truffle local machine UTC results: https://github.com/krishananth/DApp-SupplyChain/blob/main/reports/3_DAPP-SupplyChain-Truffle_UTC_Results.txt
 
 NOTE:
 Assuptions made:

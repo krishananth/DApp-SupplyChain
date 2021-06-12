@@ -13,6 +13,11 @@ App = {
     upc: 0,
     metamaskAccountID: "0x0000000000000000000000000000000000000000",
     ownerID: "0x0000000000000000000000000000000000000000",
+    rbacOwnerID: "0x0000000000000000000000000000000000000000",
+    rbacFarmerID: "0x0000000000000000000000000000000000000000",
+    rbacDistributorID: "0x0000000000000000000000000000000000000000",
+    rbacRetailerID: "0x0000000000000000000000000000000000000000",
+    rbacConsumerID: "0x0000000000000000000000000000000000000000",
     originFarmerID: "0x0000000000000000000000000000000000000000",
     originFarmName: null,
     originFarmInformation: null,
@@ -26,14 +31,18 @@ App = {
 
     init: async function () {
         App.readForm();
-        /// Setup access to blockchain
-        return await App.initWeb3();
+        return App.bindEvents();
     },
 
     readForm: function () {
         App.sku = $("#sku").val();
         App.upc = $("#upc").val();
         App.ownerID = $("#ownerID").val();
+        App.rbacOwnerID=$("#rbac-ownerID").val();
+        App.rbacFarmerID=$("#rbac-farmerID").val();
+        App.rbacDistributorID=$("#rbac-distributorID").val();
+        App.rbacRetailerID=$("#rbac-retailerID").val();
+        App.rbacConsumerID=$("#rbac-customerID").val();
         App.originFarmerID = $("#originFarmerID").val();
         App.originFarmName = $("#originFarmName").val();
         App.originFarmInformation = $("#originFarmInformation").val();
@@ -71,6 +80,7 @@ App = {
             try {
                 // Request account access
                 await window.ethereum.enable();
+                /*
                 const privateKeys = [
                     "098108903cf93d2063e03e9117af35a269b48bc0289489a4c5e1ac7fc60d50cf",
                     "a5b1152cf52ee4df2fa428d5d1738109249a2c076c052b3bfd04666832dbd1f8",
@@ -78,8 +88,15 @@ App = {
                     'eac2e75e0916e77634bd0614e567f8c7a61f5c67a30b25c176ebd4eddb7d792c',
                     '05e191012c825790b143dcd979d9245a3784e3e350b1d5719f1e847694c9e2f7',
                     '37e8df003b4cfad253bede5b7511ec050b0a7a58ab641b88027d951cdaeef25f'
-                  ];                
+                  ];  
+                */  
+                App.readForm();
+                console.log(`The owner ID from RBAC is: ${App.rbac-ownerID}`);
+                const privateKeys = [
+                    App.rbacOwnerID, App.rbacFarmerID, App.rbacDistributorID, App.rbacRetailerID, App.rbacConsumerID
+                ]; 
                 App.web3Provider = new HDWalletProvider( privateKeys, 'http://localhost:9545', 0);
+                
             } catch (error) {
                 // User denied account access...
                 console.error("User denied account access")
@@ -91,6 +108,9 @@ App = {
         }
 
         App.getMetaskAccountID();
+
+        // Get the element with id="defaultOpen" and click on it
+        $("#defaultOpen").click();
 
         return App.initSupplyChain();
     },
@@ -115,6 +135,8 @@ App = {
         })
     },
 
+
+
     initSupplyChain: function () {
         /// Source the truffle compiled smart contracts
         var jsonSupplyChain='./SupplyChain.json';
@@ -138,7 +160,7 @@ App = {
             $("#consumerID").val(App.consumerID);
         });
 
-        return App.bindEvents();
+        // return App.bindEvents();
     },
 
     bindEvents: function() {
@@ -148,12 +170,15 @@ App = {
     handleButtonClick: async function(event) {
         event.preventDefault();
 
-        App.getMetaskAccountID();
+        // App.getMetaskAccountID();
 
         var processId = parseInt($(event.target).data('id'));
         // console.log('processId',processId);
 
         switch(processId) {
+            case 11:
+                return await App.initWeb3();
+                break;
             case 1:
                 return await App.harvestItem(event);
                 break;
@@ -189,10 +214,7 @@ App = {
 
     setupRBAC: function() {
         App.contracts.SupplyChain.deployed().then(function(instance) {
-            // console.log(`Farmer IDs are: ${App.originFarmerID} and Owner ID is: ${App.ownerID}`);
-            // instance.owner().then((result) => {
-            //     console.log(`Contract Owner is: ${result}`);
-            // });
+
             instance.addFarmers([App.originFarmerID], {from: App.ownerID});
             instance.addDistributors([App.distributorID], {from: App.ownerID});
             instance.addRetailers([App.retailerID], {from: App.ownerID});
@@ -200,6 +222,7 @@ App = {
             instance.addConsumers([App.consumerID], {from: App.ownerID});
         }).then(function(result) {
             console.log(`RBAC setup successfully!`);
+            App.addToHistory("RBAC", "RBAC setup Success");
         }).catch(function(err) {
             console.log(`Error in setting up RBAC: ${err}`);
         });
@@ -213,8 +236,6 @@ App = {
             App.sku = $("#sku").val();
             App.upc = $("#upc").val();
             App.productID = sku + upc
-            // console.log(`Farmer ID is: ${App.originFarmerID}`);
-            // console.log(`Owner ID is: ${App.ownerID}`);
             return instance.harvestItem(
                 App.upc, 
                 App.originFarmerID, 
@@ -269,6 +290,7 @@ App = {
                 App.addToHistory('packItem', result.receipt.stack);    
             }
             App.addToHistory(result.logs[0].event, result.logs[0].transactionHash);
+            $('#transaction-history').click();
         }).catch(function(err) {
             console.log(err.message);
             App.addToHistory('packItem', err.message);
@@ -435,7 +457,8 @@ App = {
 
     addToHistory: function(message, txn_hash, descr) {
         descr == null ? '': descr;
-        $("#ftc-events").append('<li>' + message + ' - ' + txn_hash + '-' + descr + '</li>');
+        $("#ftc-events").append('<li>' + message + ' - ' + txn_hash  + '</li>');
+        openTab(event, 'transaction-history');
     }
 };
 

@@ -76,8 +76,22 @@ npm run dev
 2) Register 5 Accounts (Truffle accounts) for OwnerID, Farmer ID, Distributor ID, Retailer ID and CustomerID 
 3) Ensure these accunts are visible  in Metamask and connected to Truffle/Rinkeby
 
-Note:
-When you run the DApp front end, ensure that you use Product Price which is higher than the selling price of the Farmer.  Refer to the assumptions made in README.md file.
+## Assuptions made (functional assumptions):
+1) Assume Farmer sets the Product Price is set as 1 ether
+2) The Distributor adds 20% margin to Product Price and sells to Retailer = 1.2 ether (incremented by 20%)
+3) The Retailer adds 10% margin to Product Price and sells to Consumer = 1.32 ether (incremented by 10%)
+
+1) The 20% increase in Product Price by Distributor is done in the shipItem() method in the SupplyChain contract.
+SafeMath library is used to increment the ProductPrice by 20%
+
+2) The 10% increment further to the Product Price by Retailer to Consumer is done in the receiveItem() method in SupplyChain Contract.
+SafeMath library is used to increment the ProductPrice by 10%
+
+3) When a Consumer purchases the Item, the Product Price should be more than 1.32 ether.
+Otherwise the purchaseItem() UTC will fail.  Please refer to assertions made in UTCs regarding this.
+
+4) UTC 11 (last UTC) is to test/assert the transferOwnership() function defined in Ownable.sol
+
 
 ## Built With
 

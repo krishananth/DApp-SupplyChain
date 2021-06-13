@@ -9,20 +9,8 @@ Refer to the application Architecture available here: https://github.com/krishan
 
 The project design details (diagrams) are available at https://github.com/krishananth/DApp-SupplyChain/tree/main/design
 
-## Proof of Deployments (Rinkeby)
-
-The Contracts are deployed in Rinkeby Etherum test network and the details are available below:
-1) Rinkeby Transaction details:
-https://rinkeby.etherscan.io/tx/0xeb88e22da0c137100b62cafcdbb45144a0a3a34889ea2e3c3d90cf94a3cdb8cc
-
-2) Rinkeby Contract details:
-https://rinkeby.etherscan.io/address/0x7936a9e92b67ea836a208fe0637021bab35943bd
-
-3) Deployment details/log to Rinkeby network: https://github.com/krishananth/DApp-SupplyChain/blob/main/reports/1_Rinkeby-Deployment-Details.txt
-
-4) DAPP Front end Transaction details interacting with Rinkeby network: https://github.com/krishananth/DApp-SupplyChain/blob/main/reports/2_DAPP-SupplyChain-Rinkeby.pdf
-
-5) Truffle local machine UTC results: https://github.com/krishananth/DApp-SupplyChain/blob/main/reports/3_DAPP-SupplyChain-Truffle_UTC_Results.txt
+## Installation Steps
+The Installation steps are detailed here https://github.com/krishananth/DApp-SupplyChain/tree/main/docs/InstallationSteps.md
 
 ## Assuptions made:
 1) Assume Farmer sets the Product Price is set as 1 ether
@@ -45,6 +33,28 @@ Note on Rinkeby Test Network:
 2) The Distributor Product Price to Retailer is 120,000,000 GWEI (incremented by 20%)
 3) The Retailer Product Price to Consumer is 132,000,000 GWEI (incremented by 10%).
 You can see the product price as 132,000,000 GWEI (132,000,000,000,000,000 WEI or 0.132 ether) in DApp screenshot of Rinkeby output
+
+## Proof of Deployments (Rinkeby)
+
+The Contracts are deployed in Rinkeby Etherum test network and the details are available below:
+1) Rinkeby Transaction details:
+https://rinkeby.etherscan.io/tx/0xeb88e22da0c137100b62cafcdbb45144a0a3a34889ea2e3c3d90cf94a3cdb8cc
+
+2) Rinkeby Contract details:
+https://rinkeby.etherscan.io/address/0x7936a9e92b67ea836a208fe0637021bab35943bd
+
+3) Deployment details/log to Rinkeby network: https://github.com/krishananth/DApp-SupplyChain/blob/main/reports/1_Rinkeby-Deployment-Details.txt
+
+4) DAPP Front end Transaction details interacting with Rinkeby network: https://github.com/krishananth/DApp-SupplyChain/blob/main/reports/2_DAPP-SupplyChain-Rinkeby.pdf
+
+5) Truffle local machine UTC results: https://github.com/krishananth/DApp-SupplyChain/blob/main/reports/3_DAPP-SupplyChain-Truffle_UTC_Results.txt
+
+Note on Rinkeby Test Network:
+1) The Product Price is set as 100,000,000 GWEI (0.1 ether)
+2) The Distributor Product Price to Retailer is 120,000,000 GWEI (incremented by 20%)
+3) The Retailer Product Price to Consumer is 132,000,000 GWEI (incremented by 10%).
+You can see the product price as 132,000,000 GWEI (132,000,000,000,000,000 WEI or 0.132 ether) in DApp screenshot of Rinkeby output
+
 
 ## Authors
 

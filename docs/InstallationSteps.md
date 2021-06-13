@@ -30,7 +30,7 @@ A step by step series of examples that tell you have to get a development env ru
 Clone this repository:
 
 ```
-git clone https://github.com/udacity/nd1309/tree/master/course-5/project-6
+git clone https://github.com/krishananth/DApp-SupplyChain.git
 ```
 
 Change directory to ```DApp-SupplyChain``` folder and install all requisite npm packages (as listed in ```package.json```):
